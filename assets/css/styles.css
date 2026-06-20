@@ -331,6 +331,22 @@ p:last-child {
   background: #000;
 }
 
+.project-media-row {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.project-media-row .media-block {
+  margin-top: 0;
+}
+
+.project-media-row img {
+  width: 100%;
+  border-radius: calc(var(--radius) - 2px);
+  border: 1px solid var(--border);
+}
+
 .beyond-grid {
   display: grid;
   gap: 1.25rem;
@@ -392,6 +408,11 @@ p:last-child {
 @media (min-width: 769px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-media-row {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
   }
 
   .beyond-grid {
